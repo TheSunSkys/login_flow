@@ -7,6 +7,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import SplashScreen from "../screens/splashScreen";
 import LoginScreen from "../screens/auth/loginScreen";
 import HomeScreen from "../screens/homeScreen";
+import SelectLanguageScreen from "../screens/selectLanguageScreen";
+import ConditionScreen from "../screens/conditionScreen";
+
 import { colors } from "../assets/styles/colors";
 
 const Stack = createNativeStackNavigator();
@@ -88,7 +91,7 @@ const Navigation = () => {
         <AuthContext.Provider value={authContext}>
             <NavigationContainer theme={MyTheme}>
                 <Stack.Navigator
-                    initialRouteName={state && state.userToken && 'InitScreen'}>
+                    initialRouteName={state && state.userToken && 'HomeScreen'}>
                     {state && state.isLoading ? (
                         <Stack.Group screenOptions={{ headerShown: false }}>
                             <Stack.Screen name="SplashScreen">
@@ -105,10 +108,28 @@ const Navigation = () => {
                                 headerShown: false,
                                 animation: 'none',
                             }}>
+                            <Stack.Screen name="SelectLanguageScreen">
+                                {props => (
+                                    <>
+                                        <SafeAreaView style={{ flex: 1, backgroundColor: MyTheme.colors.BACKGROUND }}>
+                                            <SelectLanguageScreen {...props} />
+                                        </SafeAreaView>
+                                    </>
+                                )}
+                            </Stack.Screen>
+                            <Stack.Screen name="ConditionScreen">
+                                {props => (
+                                    <>
+                                        <SafeAreaView style={{ flex: 1, backgroundColor: MyTheme.colors.BACKGROUND }}>
+                                            <ConditionScreen {...props} />
+                                        </SafeAreaView>
+                                    </>
+                                )}
+                            </Stack.Screen>
                             <Stack.Screen name="LoginScreen">
                                 {props => (
                                     <>
-                                        <SafeAreaView style={{ flex: 1 }}>
+                                        <SafeAreaView style={{ flex: 1, backgroundColor: MyTheme.colors.BACKGROUND }}>
                                             <LoginScreen {...props} />
                                         </SafeAreaView>
                                     </>
@@ -127,7 +148,7 @@ const Navigation = () => {
                             <Stack.Screen name="HomeScreen">
                                 {props => (
                                     <>
-                                        <SafeAreaView style={{ flex: 1 }}>
+                                        <SafeAreaView style={{ flex: 1, backgroundColor: MyTheme.colors.BACKGROUND }}>
                                             <HomeScreen {...props} />
                                         </SafeAreaView>
                                     </>
