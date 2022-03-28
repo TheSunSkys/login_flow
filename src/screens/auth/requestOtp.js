@@ -27,7 +27,7 @@ const RequestOtp = ({ navigation }) => {
                 >
                     {phoneNumber}
                 </Text>
-                <ButtonComponent title={t('request otp')} onPress={() => console.log('request otp')} />
+                <ButtonComponent title={t('request otp')} onPress={() => navigation.navigate('VerifyOtpScreen')} />
                 <Text style={{ color: colors.TEXT_SUBTITLE, marginVertical: wp('2.5%') }}>{t('phone wrong')}</Text>
             </View>
         </View>
