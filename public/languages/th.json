@@ -13,6 +13,9 @@
         "remember me": "บันทึกการเข้าสู่ระบบ",
         "forgot password?": "ลืมรหัสผ่าน?",
         "login": "เข้าสู่ระบบ",
-        "not have account": "ไม่มีบัญชีผู้ใช้"
+        "not have account": "ไม่มีบัญชีผู้ใช้",
+        "phone wrong": "กรณีเบอร์โทรศัพท์ไม่ถูกต้องกรุณาติดต่อเบอร์ 02-XXX-XXX",
+        "send opt to": "OTP จะถูกส่งไปที่เบอร์โทรศัพท์",
+        "request otp": "ขอรหัส OTP"
     }
 }

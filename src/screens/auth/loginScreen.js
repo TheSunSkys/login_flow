@@ -7,7 +7,7 @@ import { useTheme } from '@react-navigation/native';
 
 import ButtonComponent from '../../components/button';
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
     const { t } = useTranslation()
     const { colors } = useTheme()
     const [rememberMe, setRememberMe] = useState(false)
@@ -28,7 +28,7 @@ const LoginScreen = () => {
                     <Text style={{ color: colors.TEXT_TITLE }}>{t('forgot password?')}</Text>
                 </TouchableOpacity>
             </View>
-            <ButtonComponent title={t('login')} onPress={() => console.log('login')} />
+            <ButtonComponent title={t('login')} onPress={() => navigation.navigate('RequestOtp')} />
             <View style={styles.viewDivider}>
                 <View style={[styles.viewLineStyle, { backgroundColor: colors.TEXT_SUBTITLE }]} />
                 <View>

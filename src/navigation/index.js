@@ -9,6 +9,7 @@ import LoginScreen from "../screens/auth/loginScreen";
 import HomeScreen from "../screens/homeScreen";
 import SelectLanguageScreen from "../screens/selectLanguageScreen";
 import ConditionScreen from "../screens/conditionScreen";
+import RequestOtp from "../screens/auth/requestOtp";
 
 import { colors } from "../assets/styles/colors";
 
@@ -131,6 +132,15 @@ const Navigation = () => {
                                     <>
                                         <SafeAreaView style={{ flex: 1, backgroundColor: MyTheme.colors.BACKGROUND }}>
                                             <LoginScreen {...props} />
+                                        </SafeAreaView>
+                                    </>
+                                )}
+                            </Stack.Screen>
+                            <Stack.Screen name="RequestOtp">
+                                {props => (
+                                    <>
+                                        <SafeAreaView style={{ flex: 1, backgroundColor: MyTheme.colors.BACKGROUND }}>
+                                            <RequestOtp {...props} />
                                         </SafeAreaView>
                                     </>
                                 )}

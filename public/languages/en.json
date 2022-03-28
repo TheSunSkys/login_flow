@@ -13,6 +13,9 @@
         "remember me": "Remember Me",
         "forgot password?": "Forgot Password?",
         "login": "Login",
-        "not have account": "Not Have Account"
+        "not have account": "Not Have Account",
+        "phone wrong": "In case the phone number is incorrect, please contact the number 02-XXX-XXX",
+        "send opt to": "Send OTP To",
+        "request otp": "Request OTP"
     }
 }
