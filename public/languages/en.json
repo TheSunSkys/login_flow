@@ -6,6 +6,13 @@
         "please select language": "Please Select Language",
         "condition": "Condition",
         "agree": "Agree",
-        "refuse": "Refuse"
+        "refuse": "Refuse",
+        "username": "Username",
+        "password": "Password",
+        "signin": "Sign In",
+        "remember me": "Remember Me",
+        "forgot password?": "Forgot Password?",
+        "login": "Login",
+        "not have account": "Not Have Account"
     }
 }

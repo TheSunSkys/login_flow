@@ -6,6 +6,13 @@
         "please select language": "กรุณาเลือกภาษา",
         "condition": "เงื่อนไขการใช้บริการ",
         "agree": "ยินยอม",
-        "refuse": "ปฏิเสธ"
+        "refuse": "ปฏิเสธ",
+        "username": "ชื่อผู้ใช้",
+        "password": "รหัสผ่าน",
+        "signin": "เปิดบัญชีเพื่อลงทะเบียนผู้ใช้",
+        "remember me": "บันทึกการเข้าสู่ระบบ",
+        "forgot password?": "ลืมรหัสผ่าน?",
+        "login": "เข้าสู่ระบบ",
+        "not have account": "ไม่มีบัญชีผู้ใช้"
     }
 }
