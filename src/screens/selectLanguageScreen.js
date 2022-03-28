@@ -8,10 +8,11 @@ import { useTheme } from '@react-navigation/native';
 import ButtonComponent from '../components/button';
 
 const SelectLanguageScreen = ({ navigation }) => {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
     const { colors } = useTheme()
 
-    const navigationToConditionScreen = () => {
+    const navigationToConditionScreen = (lang) => {
+        i18n.changeLanguage(lang)
         navigation.navigate('ConditionScreen')
     }
 
@@ -21,8 +22,8 @@ const SelectLanguageScreen = ({ navigation }) => {
                 <Text h3 h3Style={{ color: colors.TEXT_TITLE }}>{t('welcome')}</Text>
                 <Text h4 h4Style={{ color: colors.TEXT_TITLE }}>{t('please select language')}</Text>
             </View>
-            <ButtonComponent title={t('engligh lang')} onPress={navigationToConditionScreen} />
-            <ButtonComponent title={t('thai lang')} onPress={navigationToConditionScreen} />
+            <ButtonComponent title={t('engligh lang')} onPress={() => navigationToConditionScreen('en')} />
+            <ButtonComponent title={t('thai lang')} onPress={() => navigationToConditionScreen('th')} />
         </View>
     )
 }
