@@ -24,7 +24,7 @@ const LoginScreen = ({ navigation }) => {
                     onPress={() => setRememberMe(!rememberMe)}
                     textStyle={{ color: colors.TEXT_TITLE }}
                 />
-                <TouchableOpacity onPress={() => console.log('forgot password?')}>
+                <TouchableOpacity onPress={() => navigation.navigate('ForgotPasswordScreen')}>
                     <Text style={{ color: colors.TEXT_TITLE }}>{t('forgot password?')}</Text>
                 </TouchableOpacity>
             </View>

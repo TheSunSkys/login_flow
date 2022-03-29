@@ -20,6 +20,9 @@
         "resend otp": "Resend OTP",
         "not recive otp": "Not Recive OTP?",
         "verify": "Verify",
-        "enter otp": "Enter OTP"
+        "enter otp": "Enter OTP",
+        "Please enter your registered": "Please enter your registered email or phone number.",
+        "send": "Send",
+        "email / phone number": "email / phone number"
     }
 }
