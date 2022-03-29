@@ -23,7 +23,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
                     <Input containerStyle={styles.inputStyle} inputStyle={{ color: colors.TEXT_TITLE }} placeholder={t('email / phone number')} />
                 </View>
                 <View>
-                    <ButtonComponent title={t('send')} onPress={() => console.log('send')} />
+                    <ButtonComponent title={t('send')} onPress={() => navigation.navigate('SuccessScreen')} />
                 </View>
             </View>
         </View>

@@ -12,6 +12,7 @@ import ConditionScreen from "../screens/conditionScreen";
 import RequestOtp from "../screens/auth/requestOtp";
 import VerifyOtpScreen from "../screens/auth/verifyOtpScreen";
 import ForgotPasswordScreen from "../screens/forgotPasswordScreen";
+import SuccessScreen from "../screens/successScreen";
 
 import { colors } from "../assets/styles/colors";
 
@@ -161,6 +162,15 @@ const Navigation = () => {
                                     <>
                                         <SafeAreaView style={{ flex: 1, backgroundColor: MyTheme.colors.BACKGROUND }}>
                                             <ForgotPasswordScreen {...props} />
+                                        </SafeAreaView>
+                                    </>
+                                )}
+                            </Stack.Screen>
+                            <Stack.Screen name="SuccessScreen">
+                                {props => (
+                                    <>
+                                        <SafeAreaView style={{ flex: 1, backgroundColor: MyTheme.colors.BACKGROUND }}>
+                                            <SuccessScreen {...props} />
                                         </SafeAreaView>
                                     </>
                                 )}

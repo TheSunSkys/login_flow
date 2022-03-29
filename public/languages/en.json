@@ -23,6 +23,9 @@
         "enter otp": "Enter OTP",
         "Please enter your registered": "Please enter your registered email or phone number.",
         "send": "Send",
-        "email / phone number": "email / phone number"
+        "email / phone number": "email / phone number",
+        "ok": "OK",
+        "successed": "Successed",
+        "Your password has been reset successfully": "Your password has been reset successfully."
     }
 }
