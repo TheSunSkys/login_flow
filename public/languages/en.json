@@ -26,6 +26,14 @@
         "email / phone number": "email / phone number",
         "ok": "OK",
         "successed": "Successed",
-        "Your password has been reset successfully": "Your password has been reset successfully."
+        "Your password has been reset successfully": "Your password has been reset successfully.",
+        "touch id": "Touch ID",
+        "seting fingerprint des": "Set up fingerprint login for faster access.",
+        "seting fingerprint": "Seting Fingerprint",
+        "skip": "Skip",
+        "confirm pin code": "Confirm PIN CODE",
+        "setting pin code": "Setting PIN CODE",
+        "enter pin code": "Enter PIN CODE",
+        "Sign Out": "Sign Out"
     }
 }

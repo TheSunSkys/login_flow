@@ -41,6 +41,7 @@ const VerifyOtpScreen = ({ navigation }) => {
                         codeInputHighlightStyle={styles.underlineStyleHighLighted}
                         onCodeFilled={(code) => {
                             console.log(`Code is ${code}, you are good to go!`)
+                            navigation.navigate('PinCodeSettingScreen')
                         }}
                     />
                 </View>

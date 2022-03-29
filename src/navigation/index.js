@@ -3,6 +3,7 @@ import { AuthContext } from './auth';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import SplashScreen from "../screens/splashScreen";
 import LoginScreen from "../screens/auth/loginScreen";
@@ -13,6 +14,9 @@ import RequestOtp from "../screens/auth/requestOtp";
 import VerifyOtpScreen from "../screens/auth/verifyOtpScreen";
 import ForgotPasswordScreen from "../screens/forgotPasswordScreen";
 import SuccessScreen from "../screens/successScreen";
+import PinCodeSettingScreen from "../screens/pinCodeSettingScreen";
+import FingerprintSettingScreen from "../screens/fingerprintSettingScreen";
+import PinCodeValidateScreen from "../screens/pinCodeVaidateScreen";
 
 import { colors } from "../assets/styles/colors";
 
@@ -60,11 +64,11 @@ const Navigation = () => {
         () => ({
             signIn: async data => {
                 const token = 'dummy-auth-token';
-                // AsyncStorage.setItem('TOKEN', token);
+                AsyncStorage.setItem('TOKEN', token);
                 dispatch({ type: 'SIGN_IN', token: token });
             },
             signOut: () => {
-                // AsyncStorage.removeItem('TOKEN')
+                AsyncStorage.removeItem('TOKEN')
                 dispatch({ type: 'SIGN_OUT' })
             },
             signUp: async data => {
@@ -78,7 +82,7 @@ const Navigation = () => {
         const bootstrapAsync = async () => {
             let userToken = null;
             try {
-                // userToken = await AsyncStorage.getItem('TOKEN');
+                userToken = await AsyncStorage.getItem('TOKEN');
             } catch (e) {
                 // Restoring token failed
                 dispatch({ type: 'SIGN_OUT' });
@@ -175,12 +179,39 @@ const Navigation = () => {
                                     </>
                                 )}
                             </Stack.Screen>
+                            <Stack.Screen name="PinCodeSettingScreen">
+                                {props => (
+                                    <>
+                                        <SafeAreaView style={{ flex: 1, backgroundColor: MyTheme.colors.BACKGROUND }}>
+                                            <PinCodeSettingScreen {...props} />
+                                        </SafeAreaView>
+                                    </>
+                                )}
+                            </Stack.Screen>
+                            <Stack.Screen name="FingerprintSettingScreen">
+                                {props => (
+                                    <>
+                                        <SafeAreaView style={{ flex: 1, backgroundColor: MyTheme.colors.BACKGROUND }}>
+                                            <FingerprintSettingScreen {...props} />
+                                        </SafeAreaView>
+                                    </>
+                                )}
+                            </Stack.Screen>
+                            <Stack.Screen name="PinCodeValidateScreen">
+                                {props => (
+                                    <>
+                                        <SafeAreaView style={{ flex: 1, backgroundColor: MyTheme.colors.BACKGROUND }}>
+                                            <PinCodeValidateScreen {...props} />
+                                        </SafeAreaView>
+                                    </>
+                                )}
+                            </Stack.Screen>
                         </Stack.Group>
                     ) : (
                         <Stack.Group
                             screenOptions={{
                                 headerShown: false,
-                                animation: 'slide_from_right',
+                                animation: 'none',
                                 // contentStyle: {
                                 //     backgroundColor: colors.dark.BACKGROUND,
                                 // }

@@ -26,6 +26,14 @@
         "email / phone number": "อีเมล / เบอร์โทรศัพท์",
         "ok": "ตกลง",
         "successed": "สำเร็จ",
-        "Your password has been reset successfully": "รีเซ็ตรหัสผ่านของคุณสำเร็จแล้ว"
+        "Your password has been reset successfully": "รีเซ็ตรหัสผ่านของคุณสำเร็จแล้ว",
+        "touch id": "Touch ID",
+        "seting fingerprint des": "ตั้งค่าล็อคอินด้วยลายนิ้วมือเพื่อการเข้าถึงที่รวดเร็วขึ้น",
+        "seting fingerprint": "ตั้งค่าลายนิ้วมือ",
+        "skip": "ข้าม",
+        "confirm pin code": "ยืนยันรหัส PIN CODE",
+        "setting pin code": "ตั้งรหัส PIN CODE",
+        "enter pin code": "กรุณากรอกรหัส PIN CODE",
+        "Sign Out": "ออกจากระบบ"
     }
 }
